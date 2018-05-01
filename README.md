@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/djabry/sner.svg?style=svg)](https://circleci.com/gh/djabry/sner)
 # Serverless Stanford Named Entity Recognizer
 This project enables you to deploy the [Stanford Named Entity Recognizer (NER)](https://nlp.stanford.edu/software/CRF-NER.shtml) to a "serverless" environment based on [AWS Lambda](https://aws.amazon.com/lambda/) and [API Gateway](https://aws.amazon.com/api-gateway/).
 
