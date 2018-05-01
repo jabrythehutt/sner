@@ -5,7 +5,7 @@ This project enables you to deploy the [Stanford Named Entity Recognizer (NER)](
 The general advantages of [serverless computing](https://en.wikipedia.org/wiki/Serverless_computing) include cost, scalability and productivity. Specifically, these translate to:
 * The ability to analyse text in virtually any environment - most notably from the browser
 * Processing a large number of texts [concurrently](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html) - potentially thousands
-* Ease and speed of iteration - Just deploy with the [command](#Deploying to AWS) after making changes to your models or label interpretation logic
+* Ease and speed of iteration - Just deploy with the [command](#Deploying-to-AWS) after making changes to your models or label interpretation logic
 
 ## How?
 ### Getting started
