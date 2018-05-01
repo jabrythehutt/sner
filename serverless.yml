@@ -28,3 +28,7 @@ functions:
           path: entities
           method: get
           cors: true
+          request:
+            parameters:
+              querystrings:
+                text: true

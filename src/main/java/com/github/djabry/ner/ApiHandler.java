@@ -15,7 +15,6 @@ public class ApiHandler implements RequestHandler<ApiGatewayProxyRequest, ApiGat
     private static final Logger LOG = Logger.getLogger(ApiHandler.class);
     private EntityExtractor entityExtractor;
     public ApiHandler() {
-        System.setProperty("javax.xml.bind.JAXBContextFactory", "org.eclipse.persistence.jaxb.JAXBContextFactory");
         this.entityExtractor = new EntityExtractor();
     }
 

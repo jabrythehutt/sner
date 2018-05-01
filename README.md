@@ -12,7 +12,7 @@ The general advantages of [serverless computing](https://en.wikipedia.org/wiki/S
 ### Getting started
 1. Make sure you have the following installed on your machine:
 * [Node](https://nodejs.org/en/) >= 8
-* [Java JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) >= 8
+* [JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) >= 8
 * [Maven](https://maven.apache.org/what-is-maven.html)
 
 2. Sign up for an [AWS](https://aws.amazon.com/) account
