@@ -1,0 +1,30 @@
+service: sner
+
+frameworkVersion: ">=1.2.0 <2.0.0"
+
+provider:
+  name: aws
+  runtime: java8
+  memorySize: 3008
+  timeout: 30
+  # Change this to your region
+  region: eu-west-1
+
+package:
+  artifact: target/ner.jar
+
+plugins:
+  - serverless-pseudo-parameters
+
+functions:
+  extractor:
+    handler: com.github.djabry.ner.ApiHandler
+    events:
+      - http:
+          path: entities
+          method: post
+          cors: true
+      - http:
+          path: entities
+          method: get
+          cors: true

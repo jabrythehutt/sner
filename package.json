@@ -1,0 +1,18 @@
+{
+  "name": "sner",
+  "version": "0.0.1",
+  "description": "Stanford Named Entity Recognizer packaged as a Serverless API",
+  "main": "index.js",
+  "scripts": {
+    "test": "mvn test",
+    "deploy": "mvn clean install && sls deploy"
+  },
+  "author": "Daniel Jabry <djabry@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "serverless": "1.26.1"
+  },
+  "dependencies": {
+    "serverless-pseudo-parameters": "1.6.0"
+  }
+}
