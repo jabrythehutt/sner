@@ -3,9 +3,9 @@ This project enables you to deploy the [Stanford Named Entity Recognizer (NER)](
 
 ## Why?
 The general advantages of [serverless computing](https://en.wikipedia.org/wiki/Serverless_computing) include cost, scalability and productivity. Specifically, these translate to:
-* The ability to analyse text in virtually any environment - most notably from the browser.
+* The ability to analyse text in virtually any environment - most notably from the browser
 * Processing a large number of texts [concurrently](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html) - potentially thousands
-* Ease and speed of iteration - Just deploy with one command: `npm run deploy ...` after making changes to your models or label interpretation logic
+* Ease and speed of iteration - Just deploy with the [command](#Deploying to AWS) after making changes to your models or label interpretation logic
 
 ## How?
 ### Getting started
@@ -18,7 +18,10 @@ The general advantages of [serverless computing](https://en.wikipedia.org/wiki/S
 
 3. Configure your [AWS credentials](https://serverless.com/framework/docs/providers/aws/guide/credentials/) for deployment with the [Serverless framework](https://serverless.com/)
 
-4. Install the [Serverless](https://serverless.com/) dependencies using the command in the project root directory: `npm install`
+4. Install the [Serverless](https://serverless.com/) dependencies using the command in the project root directory: 
+```
+npm install
+```
 
 ### Deploying to AWS
 
@@ -87,25 +90,26 @@ The [pom.xml](pom.xml) and [serverless.yml](serverless.yml) files contain most o
 * Select the classifiers you wish to use in the [pom.xml](pom.xml) `<properties>` and `<build>` sections:
 
 ```xml
-...
+<project>
+<!--...-->
 <properties>
-    ...
+    <!--...-->
     <ner.classifier1>english.all.3class.distsim</ner.classifier1>
     <ner.classifier2>english.conll.4class.distsim</ner.classifier2>
     <ner.classifier3>english.muc.7class.distsim</ner.classifier3>
-    ...
+    <!--...-->
 </properties>
-...
+<!--...-->
   <build>
     <plugins>
-      ...
+      <!--...-->
       <plugin>
-        ...
+        <!--...-->
         <configuration>
-          ...
+          <!--...-->
           <filters>
             <filter>
-              ...
+              <!--...-->
               <includes>
                 <include>${ner.prefix}${ner.classifier1}.*</include>
                 <include>${ner.prefix}${ner.classifier2}.*</include>
@@ -114,11 +118,14 @@ The [pom.xml](pom.xml) and [serverless.yml](serverless.yml) files contain most o
             </filter>
           </filters>
         </configuration>
-        ...
+        <!--...-->
       </plugin>
-    ...
+    <!--...-->
     </plugins>
   </build>
+  <!--...-->
+</project>
+
 
 ```
 
@@ -126,7 +133,7 @@ The [pom.xml](pom.xml) and [serverless.yml](serverless.yml) files contain most o
 ```xml
 <properties>
     <nlp.version>3.9.1</nlp.version>
-    ...
+    <!--...-->
 </properties>
 ```
 
