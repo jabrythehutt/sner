@@ -10,9 +10,9 @@
   <properties>
     <nlp.version>3.9.1</nlp.version>
     <ner.prefix>edu/stanford/nlp/models/ner/</ner.prefix>
-    <ner.classifier1>english.all.3class.distsim</ner.classifier1>
-    <ner.classifier2>english.conll.4class.distsim</ner.classifier2>
-    <ner.classifier3>english.muc.7class.distsim</ner.classifier3>
+    <ner.model1>english.all.3class.distsim</ner.model1>
+    <ner.model2>english.conll.4class.distsim</ner.model2>
+    <ner.model3>english.muc.7class.distsim</ner.model3>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -133,9 +133,9 @@
             <filter>
               <artifact>edu.stanford.nlp:stanford-corenlp:models-english</artifact>
               <includes>
-                <include>${ner.prefix}${ner.classifier1}.*</include>
-                <include>${ner.prefix}${ner.classifier2}.*</include>
-                <include>${ner.prefix}${ner.classifier3}.*</include>
+                <include>${ner.prefix}${ner.model1}.*</include>
+                <include>${ner.prefix}${ner.model2}.*</include>
+                <include>${ner.prefix}${ner.model3}.*</include>
               </includes>
             </filter>
           </filters>

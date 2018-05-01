@@ -39,7 +39,7 @@ public class EntityExtractor {
         Properties props = this.getProperties();
         return props.stringPropertyNames()
                 .stream()
-                .filter(propertyName -> propertyName.startsWith("ner.classifier"))
+                .filter(propertyName -> propertyName.startsWith("ner.model"))
                 .map(props::getProperty)
                 .collect(Collectors.toList());
     }

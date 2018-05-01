@@ -88,16 +88,16 @@ The "business logic" lives in the [EntityExtractor](src/main/java/com/github/dja
 ### Configuration
 The [pom.xml](pom.xml) and [serverless.yml](serverless.yml) files contain most of the important settings in this project.
 
-* Select the classifiers you wish to use in the [pom.xml](pom.xml) `<properties>` and `<build>` sections:
+* Select the [models](https://nlp.stanford.edu/software/CRF-NER.shtml#Models) you wish to use in the [pom.xml](pom.xml) `<properties>` and `<build>` sections:
 
 ```xml
 <project>
 <!--...-->
 <properties>
     <!--...-->
-    <ner.classifier1>english.all.3class.distsim</ner.classifier1>
-    <ner.classifier2>english.conll.4class.distsim</ner.classifier2>
-    <ner.classifier3>english.muc.7class.distsim</ner.classifier3>
+    <ner.model1>english.all.3class.distsim</ner.model1>
+    <ner.model2>english.conll.4class.distsim</ner.model2>
+    <ner.model3>english.muc.7class.distsim</ner.model3>
     <!--...-->
 </properties>
 <!--...-->
@@ -112,9 +112,9 @@ The [pom.xml](pom.xml) and [serverless.yml](serverless.yml) files contain most o
             <filter>
               <!--...-->
               <includes>
-                <include>${ner.prefix}${ner.classifier1}.*</include>
-                <include>${ner.prefix}${ner.classifier2}.*</include>
-                <include>${ner.prefix}${ner.classifier3}.*</include>
+                <include>${ner.prefix}${ner.model1}.*</include>
+                <include>${ner.prefix}${ner.model2}.*</include>
+                <include>${ner.prefix}${ner.model3}.*</include>
               </includes>
             </filter>
           </filters>
