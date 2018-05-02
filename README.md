@@ -105,6 +105,8 @@ The [pom.xml](pom.xml) and [serverless.yml](serverless.yml) files contain most o
     <plugins>
       <!--...-->
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
         <!--...-->
         <configuration>
           <!--...-->
