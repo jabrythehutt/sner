@@ -11,25 +11,48 @@ The general advantages of [serverless computing](https://en.wikipedia.org/wiki/S
 ## How?
 ### Getting started
 1. Make sure you have the following installed on your machine:
-* [Node](https://nodejs.org/en/) >= 8
-* [JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) >= 8
-* [Maven](https://maven.apache.org/what-is-maven.html)
+
+    * [Docker](https://docs.docker.com/install/)
+
+    Or
+    
+    * [Node](https://nodejs.org/en/) >= 8
+    * [JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) >= 8
+    * [Maven](https://maven.apache.org/what-is-maven.html)   
 
 2. Sign up for an [AWS](https://aws.amazon.com/) account
 
-3. Configure your [AWS credentials](https://serverless.com/framework/docs/providers/aws/guide/credentials/) for deployment with the [Serverless framework](https://serverless.com/)
+3. Configure your [AWS credentials](https://serverless.com/framework/docs/providers/aws/guide/credentials/) for deployment with the [Serverless framework](https://serverless.com/). Make sure these are set up as the environment variables `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` if working with docker.
 
-4. Install the [Serverless](https://serverless.com/) dependencies using the command in the project root directory: 
-```
-npm install
-```
+4. Install dependencies: 
+    * With docker:
+        ```docker
+        docker build -t sner .
+        ```
+          
+        Or 
+    
+    * With Node/JDK/Maven: Install the [Serverless](https://serverless.com/) dependencies using the command in the project root directory: 
+       ```
+        npm install
+       ```
 
 ### Deploying to AWS
 
-Run the command below with your environment stage e.g. "dev" instead of the placeholder: 
+With docker:
+
 ```
-npm run deploy -- --stage=[YOUR_STAGE_NAME]
+docker run --rm -it  -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY sner npm run deploy -- --stage=dev
 ``` 
+
+Or 
+
+With Node/JDK/Maven:
+
+```
+npm run deploy -- --stage=dev
+``` 
+
 You should see your POST and GET endpoints displayed after a successful deployment e.g.
 ```
 ...
