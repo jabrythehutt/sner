@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.github.djabry</groupId>
-  <artifactId>ner</artifactId>
+  <artifactId>sner</artifactId>
   <packaging>jar</packaging>
   <version>dev</version>
   <name>sner</name>

@@ -1,4 +1,4 @@
-package com.github.djabry.ner;
+package com.github.djabry.sner;
 
 import com.amazonaws.services.lambda.runtime.Context;
 import lombok.Data;

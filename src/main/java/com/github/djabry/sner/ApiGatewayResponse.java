@@ -1,4 +1,4 @@
-package com.github.djabry.ner;
+package com.github.djabry.sner;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

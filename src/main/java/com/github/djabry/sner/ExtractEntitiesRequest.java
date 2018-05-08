@@ -1,4 +1,4 @@
-package com.github.djabry.ner;
+package com.github.djabry.sner;
 
 import lombok.Builder;
 import lombok.Data;

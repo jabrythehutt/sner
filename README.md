@@ -101,7 +101,7 @@ Example payload for the POST endpoint:
 
 ## What?
 ### Label interpretation logic
-The "business logic" lives in the [EntityExtractor](src/main/java/com/github/djabry/ner/EntityExtractor.java) class and processes text in the following way:
+The "business logic" lives in the [EntityExtractor](src/main/java/com/github/djabry/sner/EntityExtractor.java) class and processes text in the following way:
 
 1. Finds labels associated with each word in a string using the [CoreNLP](https://stanfordnlp.github.io/CoreNLP/) library
 2. Filters the labels to leave only those corresponding to named entities 

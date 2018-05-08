@@ -1,4 +1,4 @@
-package com.github.djabry.ner;
+package com.github.djabry.sner;
 
 import edu.stanford.nlp.ie.AbstractSequenceClassifier;
 import edu.stanford.nlp.ie.NERClassifierCombiner;
