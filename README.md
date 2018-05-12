@@ -135,7 +135,7 @@ The [pom.xml](pom.xml) and [serverless.yml](serverless.yml) files contain most o
           <!--...-->
           <filters>
             <filter>
-              <!--...-->
+              <!-- This minimises the output jar file size to remain within the [Lambda limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html) by only including your selected models -->
               <includes>
                 <include>${ner.prefix}${ner.model1}.*</include>
                 <include>${ner.prefix}${ner.model2}.*</include>
